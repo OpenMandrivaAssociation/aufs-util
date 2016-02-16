@@ -1,4 +1,5 @@
 %define date 20160216
+%define debug_package %{nil}
 
 %define major 2
 %define libpkg %mklibname au %{major}
