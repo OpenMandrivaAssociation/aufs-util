@@ -30,8 +30,12 @@ The AUFS library
 
 %prep
 %setup -qn %{name}-%{version}-%{date}
+# We don't need to link the tools statically, we have the right lib...
 sed -i -e 's,-static,,;s,-o root -g root,,' Makefile
+# But it should be available before /usr is needed...
 sed -i -e 's,/usr/lib,/%{_lib},g' libau/Makefile
+# We don't want a version check, the build machine may not be running the target kernel
+sed -i -e 's,all: ver_test,all:,' Makefile
 
 %build
 %make CC="%{__cc}" CFLAGS="%{optflags}" LDFLAGS="%{optflags}"
