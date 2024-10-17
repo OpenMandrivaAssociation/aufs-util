@@ -13,7 +13,7 @@ Release: 0.%{date}.1
 Source0: aufs-util-%{version}-%{date}.tar.xz
 Source100: %{name}.rpmlintrc
 Summary: Tools for working with the AUFS filesystem
-URL: http://aufs.sf.net/
+URL: https://aufs.sf.net/
 License: GPL
 Group: System/Base
 Requires: %{libpkg} = %{EVRD}
