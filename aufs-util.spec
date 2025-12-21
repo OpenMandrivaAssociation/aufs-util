@@ -18,6 +18,7 @@ License: GPL
 Group: System/Base
 Requires: %{libpkg} = %{EVRD}
 
+BuildRequires:	make
 %description
 Tools for working with the AUFS filesystem
 
